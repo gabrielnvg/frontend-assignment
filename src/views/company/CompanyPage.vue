@@ -1,7 +1,6 @@
-<template>
-  <div id="company-page">
-    <h2>Company Page</h2>
-  </div>
+<template lang="pug">
+  #company-page
+    h2 Company Page
 </template>
 
 <script>

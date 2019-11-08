@@ -1,7 +1,6 @@
-<template>
-  <div id="company-data">
-    <h2>Company Data</h2>
-  </div>
+<template lang="pug">
+  #company-data
+    h2 Company Data
 </template>
 
 <script>

@@ -1,8 +1,7 @@
-<template>
-  <div id="company">
-    <h1>Company</h1>
-    <router-view />
-  </div>
+<template lang="pug">
+  #company
+    h1 Company
+    router-view
 </template>
 
 <script>

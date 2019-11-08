@@ -1,8 +1,7 @@
-<template>
-  <div> 
-    <h2>Header</h2>
-    <hr />
-  </div>
+<template lang="pug">
+  div
+    h2 Header
+    hr
 </template>
 
 <script>
