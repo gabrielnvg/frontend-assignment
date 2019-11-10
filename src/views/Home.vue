@@ -1,5 +1,5 @@
 <template lang="pug">
-  #home.main-container
+  #home
     h1 Home
 </template>
 

@@ -1,7 +1,8 @@
 <template lang="pug">
   #app
     TheHeader
-    router-view
+    .main-container
+      router-view
     TheFooter
 </template>
 

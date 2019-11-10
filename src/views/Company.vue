@@ -1,5 +1,5 @@
 <template lang="pug">
-  #company.main-container
+  #company
     h1 Company
     router-view
 </template>
