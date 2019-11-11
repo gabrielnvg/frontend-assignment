@@ -7,9 +7,3 @@
 <script>
 export default {};
 </script>
-
-<style scoped lang="scss">
-  #company {
-    background-color: var(--color-page-bg);
-  }
-</style>
