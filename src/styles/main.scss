@@ -1,6 +1,11 @@
 @import 'partials/reset';
+@import 'partials/fonts';
 @import 'partials/variables';
 @import 'partials/mixins';
+
+body {
+  font-family: var(--font-family);
+}
 
 .main-container {
   padding: 20px 10px;
