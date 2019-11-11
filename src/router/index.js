@@ -20,7 +20,15 @@ const routes = [
       },{
         path: 'home',
         name: 'home',
-        component: Home
+        component: Home,
+        meta: {
+          breadcrumbs: [
+            {
+              text: 'Home',
+              href: '/home'
+            }
+          ]
+        }
       },
       {
         path: 'company',
@@ -34,17 +42,53 @@ const routes = [
           {
             path: 'data',
             name: 'company-data',
-            component: CompanyData
+            component: CompanyData,
+            meta: {
+              breadcrumbs: [
+                {
+                  text: 'Home',
+                  href: '/home'
+                },
+                {
+                  text: 'Company Data',
+                  href: '/company/data'
+                }
+              ]
+            }
           },
           {
             path: 'table',
             name: 'company-table',
-            component: CompanyTable
+            component: CompanyTable,
+            meta: {
+              breadcrumbs: [
+                {
+                  text: 'Home',
+                  href: '/home'
+                },
+                {
+                  text: 'Company Table',
+                  href: '/company/table'
+                }
+              ]
+            }
           },
           {
             path: 'page',
             name: 'company-page',
-            component: CompanyPage
+            component: CompanyPage,
+            meta: {
+              breadcrumbs: [
+                {
+                  text: 'Home',
+                  href: '/home'
+                },
+                {
+                  text: 'Company Page',
+                  href: '/company/page'
+                }
+              ]
+            }
           }
         ]
       },
