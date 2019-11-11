@@ -20,7 +20,7 @@
   "license": "ISC",
   "dependencies": {
     "vue": "2.6.8",
-    "vue-router": "^3.0.1",
+    "vue-router": "3.0.1",
     "vuex": "^3.0.1"
   },
   "devDependencies": {
@@ -64,7 +64,7 @@
     "sass-resources-loader": "^2.0.0",
     "url-loader": "^1.1.2",
     "vue-jest": "^3.0.1",
-    "vue-loader": "^15.4.2",
+    "vue-loader": "15.4.2",
     "vue-style-loader": "^4.1.2",
     "vue-template-compiler": "2.6.8",
     "webpack": "^4.25.1",
