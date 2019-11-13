@@ -6,9 +6,6 @@
 <script>
 import { mapState, mapMutations } from 'vuex';
 
-const elComputedStyle = getComputedStyle(document.documentElement);
-let defaultMainContainerBackgroundColor = elComputedStyle.getPropertyValue('--color-page-bg');
-
 export default {
   computed: {
     ...mapState([
@@ -17,14 +14,15 @@ export default {
   },
   methods: {
     ...mapMutations([
-      'SET_MAIN_CONTENT_STYLE'
+      'SET_MAIN_CONTENT_STYLE',
+      'RESET_MAIN_CONTAINER_STYLE'
     ]),
   },
   mounted() {
     this.SET_MAIN_CONTENT_STYLE('#E7E9F3');
   },
   destroyed() {
-    this.SET_MAIN_CONTENT_STYLE(defaultMainContainerBackgroundColor);
+    this.RESET_MAIN_CONTAINER_STYLE();
   }
 }
 </script>
