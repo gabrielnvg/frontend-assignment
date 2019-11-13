@@ -32,7 +32,6 @@ const routes = [
       },
       {
         path: 'company',
-        name: 'company',
         component: Company,
         children: [
           {
