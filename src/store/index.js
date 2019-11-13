@@ -1,17 +1,19 @@
-import Vue from 'vue'
-import Vuex from 'vuex'
+import Vue from 'vue';
+import Vuex from 'vuex';
 
-Vue.use(Vuex)
+Vue.use(Vuex);
+
+const elComputedStyle = getComputedStyle(document.documentElement);
 
 export default new Vuex.Store({
   state: {
-  },
-  getters: {
+    mainContainerStyle: {
+      backgroundColor: elComputedStyle.getPropertyValue('--color-page-bg')
+    }
   },
   mutations: {
-  },
-  actions: {
-  },
-  modules: {
+    SET_MAIN_CONTENT_STYLE: (state, color) => {
+      state.mainContainerStyle.backgroundColor = color;
+    }
   }
 })
