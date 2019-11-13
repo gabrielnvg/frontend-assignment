@@ -1,13 +1,13 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
-import App from '../App.vue'
-import Home from '../pages/Home.vue'
-import Company from '../pages/Company.vue'
-import CompanyData from '../pages/company/CompanyData.vue'
-import CompanyTable from '../pages/company/CompanyTable.vue'
-import CompanyPage from '../pages/company/CompanyPage.vue'
+import Vue from 'vue';
+import VueRouter from 'vue-router';
+import App from '../App.vue';
+import Home from '../pages/Home.vue';
+import Company from '../pages/Company.vue';
+import CompanyData from '../pages/company/CompanyData.vue';
+import CompanyTable from '../pages/company/CompanyTable.vue';
+import CompanyPage from '../pages/company/CompanyPage.vue';
 
-Vue.use(VueRouter)
+Vue.use(VueRouter);
 
 const routes = [
   {
@@ -103,4 +103,4 @@ const router = new VueRouter({
   routes
 })
 
-export default router
+export default router;

@@ -24,5 +24,5 @@ export default {
   destroyed() {
     this.RESET_MAIN_CONTAINER_STYLE();
   }
-}
+};
 </script>
