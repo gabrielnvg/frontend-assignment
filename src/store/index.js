@@ -13,7 +13,7 @@ export default new Vuex.Store({
     }
   },
   mutations: {
-    SET_MAIN_CONTENT_STYLE: (state, color) => {
+    SET_MAIN_CONTAINER_STYLE: (state, color) => {
       state.mainContainerStyle.backgroundColor = color;
     },
     RESET_MAIN_CONTAINER_STYLE: (state) => {

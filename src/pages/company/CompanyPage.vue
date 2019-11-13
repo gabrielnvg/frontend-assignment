@@ -14,12 +14,12 @@ export default {
   },
   methods: {
     ...mapMutations([
-      'SET_MAIN_CONTENT_STYLE',
+      'SET_MAIN_CONTAINER_STYLE',
       'RESET_MAIN_CONTAINER_STYLE'
     ]),
   },
   mounted() {
-    this.SET_MAIN_CONTENT_STYLE('#E7E9F3');
+    this.SET_MAIN_CONTAINER_STYLE('#E7E9F3');
   },
   destroyed() {
     this.RESET_MAIN_CONTAINER_STYLE();
