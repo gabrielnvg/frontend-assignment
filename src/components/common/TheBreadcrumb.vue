@@ -29,6 +29,8 @@ export default {
 
 <style scoped lang="scss">
   .breadcrumbs {
+    font-size: var(--text-sm);
+
     ol {
     margin: 0;
     padding: 0;
