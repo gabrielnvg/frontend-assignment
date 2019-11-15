@@ -8,7 +8,7 @@ export default {};
 
 <style scoped lang="scss">
   #the-header {
-    height: 80px;
+    height: 70px;
     background-color: var(--color-primary);
   }
 </style>
