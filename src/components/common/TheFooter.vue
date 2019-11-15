@@ -8,7 +8,7 @@ export default {};
 
 <style scoped lang="scss">
   #the-footer {
-    height: 140px;
+    height: 110px;
     background-color: lightgray;
   }
 </style>
