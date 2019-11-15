@@ -1,8 +1,9 @@
 <template lang="pug">
-  ol.breadcrumbs
-    li(v-for="(breadcrumb, i) of breadcrumbs", :key="`breadcrumb-${i}`")
-      router-link(:to="breadcrumb.href")
-        | {{ breadcrumb.text }}
+  nav.breadcrumbs
+    ol
+      li(v-for="(breadcrumb, i) of breadcrumbs", :key="`breadcrumb-${i}`")
+        router-link(:to="breadcrumb.href")
+          | {{ breadcrumb.text }}
 </template>
 
 <script>
@@ -28,34 +29,36 @@ export default {
 
 <style scoped lang="scss">
   .breadcrumbs {
+    ol {
     margin: 0;
     padding: 0;
     list-style: none;
 
-    li {
-      display: inline;
-      color: #979193;
+      li {
+        display: inline;
+        color: #979193;
 
-      &:not(:last-child) {
-        &:after {
-          content: '\00a0\00a0\00a0\00a0/\00a0\00a0\00a0\00a0';
+        &:not(:last-child) {
+          &:after {
+            content: '\00a0\00a0\00a0\00a0/\00a0\00a0\00a0\00a0';
+          }
+
+          a:hover {
+            color: #b5afb1;
+          }
         }
 
-        a:hover {
-          color: #b5afb1;
+        &:last-child {
+          a {
+            cursor: initial;
+          }
         }
-      }
-
-      &:last-child {
+        
         a {
-          cursor: initial;
+          color: inherit;
+          text-transform: uppercase;
+          text-decoration: none;
         }
-      }
-      
-      a {
-        color: inherit;
-        text-transform: uppercase;
-        text-decoration: none;
       }
     }
   }
