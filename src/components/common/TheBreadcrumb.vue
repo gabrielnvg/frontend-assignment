@@ -1,5 +1,5 @@
 <template lang="pug">
-  ul.breadcrumbs
+  ol.breadcrumbs
     li(v-for="(breadcrumb, i) of breadcrumbs", :key="`breadcrumb-${i}`")
       router-link(:to="breadcrumb.href")
         | {{ breadcrumb.text }}
