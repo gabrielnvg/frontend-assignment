@@ -1,6 +1,7 @@
 @import 'partials/fonts';
 @import 'partials/reset';
-@import 'partials/variables';
+@import 'partials/scss-variables';
+@import 'partials/css-variables';
 @import 'partials/mixins';
 
 body {
@@ -11,7 +12,7 @@ main {
   background-color: var(--color-page-bg);
 
   .main-container {
-    max-width: var(--breakpoint-lg);
+    max-width: $breakpoint-lg;
     margin: 0 auto;
     padding: 20px 10px;
   }
