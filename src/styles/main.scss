@@ -7,7 +7,12 @@ body {
   font-family: var(--font-family);
 }
 
-.main-container {
-  padding: 20px 10px;
+main {
   background-color: var(--color-page-bg);
+
+  .main-container {
+    max-width: var(--breakpoint-lg);
+    margin: 0 auto;
+    padding: 20px 10px;
+  }
 }

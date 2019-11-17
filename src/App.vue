@@ -1,9 +1,10 @@
 <template lang="pug">
   #app
     TheHeader
-    .main-container(v-bind:style="mainContainerStyle")
-      TheBreadcrumb
-      router-view
+    main(v-bind:style="mainContainerStyle")
+      .main-container
+        TheBreadcrumb
+        router-view
     TheFooter
 </template>
 
