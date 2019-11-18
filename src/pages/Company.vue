@@ -1,12 +1,18 @@
 <template lang="pug">
   .company
-    h1 company
+    TheCompanyNavbar
     .company__container
       router-view
 </template>
 
 <script>
-export default {};
+import TheCompanyNavbar from 'Components/company/TheCompanyNavbar.vue';
+
+export default {
+  components: {
+    TheCompanyNavbar
+  }
+};
 </script>
 
 <style scoped lang="scss">
