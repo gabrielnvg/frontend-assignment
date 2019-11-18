@@ -17,6 +17,7 @@ export default {
 
 <style scoped lang="scss">
   .company {
+    margin-top: 20px;
     display: flex;
     flex-direction: column;
 
