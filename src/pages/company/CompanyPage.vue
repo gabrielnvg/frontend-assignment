@@ -1,5 +1,5 @@
 <template lang="pug">
-  #company-page
+  .company-page
     h2 Company Page
 </template>
 
