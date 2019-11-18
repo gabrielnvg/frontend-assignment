@@ -30,6 +30,7 @@ export default {
 <style scoped lang="scss">
   .breadcrumbs {
     font-size: var(--text-sm);
+    text-transform: uppercase;
 
     ol {
     margin: 0;
@@ -58,7 +59,6 @@ export default {
         
         a {
           color: inherit;
-          text-transform: uppercase;
           text-decoration: none;
         }
       }
