@@ -1,5 +1,5 @@
 <template lang="pug">
-  #the-footer
+  .the-footer
 </template>
 
 <script>
@@ -7,7 +7,7 @@ export default {};
 </script>
 
 <style scoped lang="scss">
-  #the-footer {
+  .the-footer {
     height: 110px;
     background-color: lightgray;
   }

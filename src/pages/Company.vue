@@ -1,7 +1,7 @@
 <template lang="pug">
-  #company
+  .company
     h1 company
-    .company-main-container
+    .company__container
       router-view
 </template>
 
@@ -10,7 +10,7 @@ export default {};
 </script>
 
 <style scoped lang="scss">
-  #company {
+  .company {
     display: flex;
     flex-direction: column;
 
@@ -20,7 +20,7 @@ export default {};
       justify-content: space-between;
     }
 
-    .company-main-container {
+    &__container {
       max-width: 720px;
     }
   }
