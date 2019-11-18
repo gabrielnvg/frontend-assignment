@@ -4,7 +4,7 @@ import Vuex from 'vuex';
 Vue.use(Vuex);
 
 const elComputedStyle = getComputedStyle(document.documentElement);
-const defaultMainContainerBackgroundColor = elComputedStyle.getPropertyValue('--color-page-bg');
+const defaultMainContainerBackgroundColor = elComputedStyle.getPropertyValue('--color-background');
 
 export default new Vuex.Store({
   state: {
