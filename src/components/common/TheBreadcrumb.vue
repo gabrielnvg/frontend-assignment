@@ -2,8 +2,7 @@
   nav.breadcrumbs
     ol
       li(v-for="(breadcrumb, i) of breadcrumbs", :key="`breadcrumb-${i}`")
-        router-link(:to="breadcrumb.href")
-          | {{ breadcrumb.text }}
+        router-link(:to="breadcrumb.href") {{ breadcrumb.text }}
 </template>
 
 <script>
