@@ -41,7 +41,7 @@ export default {};
         }
 
         &.router-link-active {
-          color: #7B7B7C;
+          color: #505050;
           box-shadow: inset 3px 0px 0px 0px #344279;
         }
       }
