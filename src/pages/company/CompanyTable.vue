@@ -1,6 +1,6 @@
 <template lang="pug">
   .company-table
-    h2 Company Table
+    //- Table page content
 </template>
 
 <script>
