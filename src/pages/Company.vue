@@ -32,6 +32,10 @@ export default {
 
     &__container {
       max-width: 720px;
+
+      @media screen and (max-width: ($breakpoint-lg - 1px)) {
+        margin-top: 20px;
+      }
     }
   }
 </style>
