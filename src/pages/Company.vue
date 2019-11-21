@@ -26,6 +26,10 @@ export default {
       flex-direction: row;
     }
 
+    & > * {
+      flex: 1;
+    }
+
     &__container {
       max-width: 720px;
     }
