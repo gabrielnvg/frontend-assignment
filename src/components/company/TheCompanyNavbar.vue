@@ -12,7 +12,9 @@ export default {};
 
 <style scoped lang="scss">
   .company-navbar {
-    width: 225px;
+    margin-right: 20px;
+    max-width: 225px;
+    flex: 1;
     background-color: var(--color-background);
     border: 1px solid var(--color-border);
     border-radius: 5px;
