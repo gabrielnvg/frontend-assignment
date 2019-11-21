@@ -14,6 +14,7 @@ export default {};
   .company-navbar {
     margin-right: 20px;
     max-width: 225px;
+    height: 100%;
     background-color: var(--color-background);
     border: 1px solid var(--color-border);
     border-radius: 5px;
@@ -40,7 +41,7 @@ export default {};
         }
 
         &.router-link-active {
-          color: #505050;
+          color: var(--color-text);
           box-shadow: inset 3px 0px 0px 0px #344279;
         }
       }
