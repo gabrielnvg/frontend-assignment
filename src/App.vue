@@ -1,7 +1,7 @@
 <template lang="pug">
   #app
     TheHeader
-    main(v-bind:style="mainContainerStyle")
+    main(:style="mainContainerStyle")
       .main-container
         TheBreadcrumb
         router-view
