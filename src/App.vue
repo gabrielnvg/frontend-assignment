@@ -24,6 +24,13 @@ export default {
     ...mapState([
       'mainContainerStyle'
     ])
+  },
+  mounted() {
+    const headerHeight = document.querySelector('.the-header').offsetHeight;
+    const footerHeight = document.querySelector('.the-footer').offsetHeight;
+    const elMain = document.querySelector('main');
+
+    elMain.style.minHeight = `calc(100vh - (${headerHeight} + ${footerHeight}))`;
   }
 };
 </script>
