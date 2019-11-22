@@ -19,7 +19,6 @@ export default {
   .company {
     margin-top: 20px;
     display: flex;
-    align-content: center;
     flex-direction: column;
 
     @media screen and (min-width: $breakpoint-lg) {
