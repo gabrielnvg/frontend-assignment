@@ -1,6 +1,6 @@
 <template lang="pug">
   .company-page
-    .company-cards-container
+    .company-page__cards-container
       CompanyCard(title="Card title 1") Card content 1
       CompanyCard(title="Card title 2") Card content 2
       CompanyCard(title="Card title 3") Card content 3
@@ -37,9 +37,11 @@ export default {
 </script>
 
 <style scoped lang="scss">
-  .company-cards-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
-    grid-gap: 15px;
+  .company-page {
+    &__cards-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+      grid-gap: 15px;
+    }
   }
 </style>
