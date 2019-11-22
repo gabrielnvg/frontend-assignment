@@ -1,5 +1,12 @@
 <template lang="pug">
   .company-page
+    TheCompanyPageHeader(
+      image="squares.png",
+      name="Microsoft",
+      location="Redmond, WA USA",
+      description="At Microsoft, our mission is to empower every person and every organization on the planet to achieve more.<br>Our mission is grounded in both the world in which we live and the future we strive to create.",
+      view-more="#/company/page"
+    )
     .company-page__cards-container
       CompanyCard(title="Card title 1") Card content 1
       CompanyCard(title="Card title 2") Card content 2
@@ -10,10 +17,12 @@
 
 <script>
 import { mapState, mapMutations } from 'vuex';
+import TheCompanyPageHeader from 'Components/company/TheCompanyPageHeader.vue';
 import CompanyCard from 'Components/company/CompanyCard.vue';
 
 export default {
   components: {
+    TheCompanyPageHeader,
     CompanyCard
   },
   computed: {
