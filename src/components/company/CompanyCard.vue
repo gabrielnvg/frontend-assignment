@@ -27,7 +27,7 @@ export default {
 
     &__title {
       padding: 15px 15px 20px;
-      font-size: var(--text-sm);
+      font-size: var(--font-sm);
       text-transform: uppercase;
 
       &:not(:last-of-type) {
@@ -37,7 +37,7 @@ export default {
 
     &__body {
       padding: 20px 15px 15px;
-      font-size: var(--text-md);
+      font-size: var(--font-md);
       color: var(--color-text);
     }
   }

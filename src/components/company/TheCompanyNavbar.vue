@@ -18,7 +18,7 @@ export default {};
     background-color: var(--color-background);
     border: 1px solid var(--color-border);
     border-radius: 5px;
-    font-size: var(--text-sm);
+    font-size: var(--font-sm);
     font-weight: bold;
     text-transform: uppercase;
     color: var(--color-text-highlight);

@@ -28,7 +28,7 @@ export default {
 
 <style scoped lang="scss">
   .breadcrumbs {
-    font-size: var(--text-sm);
+    font-size: var(--font-sm);
     text-transform: uppercase;
 
     ol {

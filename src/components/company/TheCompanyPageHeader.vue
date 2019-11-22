@@ -70,14 +70,14 @@ export default {
 
     &__name {
       margin-bottom: 10px;
-      font-size: var(--text-lg);
+      font-size: var(--font-lg);
     }
 
     &__location {
       display: flex;
       align-items: center;
       justify-content: flex-start;
-      font-size: var(--text-sm);
+      font-size: var(--font-sm);
       color: #666666;
 
       img {
@@ -86,7 +86,7 @@ export default {
     }
 
     &__description {
-      font-size: var(--text-md);
+      font-size: var(--font-md);
       color: var(--color-text);
       line-height: 25px;
 
