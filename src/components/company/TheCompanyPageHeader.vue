@@ -88,7 +88,7 @@ export default {
     &__description {
       font-size: var(--font-md);
       color: var(--color-text);
-      line-height: 25px;
+      line-height: var(--line-height-md);
 
       a {
         color: var(--color-text-highlight);
