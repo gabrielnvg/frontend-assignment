@@ -30,7 +30,7 @@ export default {
     const footerHeight = document.querySelector('.the-footer').offsetHeight;
     const elMain = document.querySelector('main');
 
-    elMain.style.minHeight = `calc(100vh - (${headerHeight} + ${footerHeight}))`;
+    elMain.style.minHeight = `calc(100vh - (${headerHeight}px + ${footerHeight}px))`;
   }
 };
 </script>
