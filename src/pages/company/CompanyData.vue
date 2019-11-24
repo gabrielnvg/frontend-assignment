@@ -17,14 +17,21 @@
         label="Company Spend Ability",
         placeholder="$150,000 - $330,000"
       )
+      TextArea(
+        id="notes",
+        label="Notes",
+        placeholder="Good Tech Company"
+      )
 </template>
 
 <script>
 import InputField from 'Components/common/InputField.vue';
+import TextArea from 'Components/common/TextArea.vue';
 
 export default {
   components: {
-    InputField
+    InputField,
+    TextArea
   },
 };
 </script>
