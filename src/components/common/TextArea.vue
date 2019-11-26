@@ -1,12 +1,23 @@
 <template lang="pug">
-  label
-    | {{ label }}
-    textarea(:id="id", :name="id", :placeholder="`e.g. ${placeholder}`")
+  .text-area-field
+    label(:for="id") {{ label }}
+    textarea(
+      :value="value",
+      :id="id",
+      :name="id",
+      :class="{ 'has-error': hasError }",
+      :placeholder="`e.g. ${placeholder}`"
+    )
+    .input-error-message(v-if="hasError") {{ errorMessage }}
 </template>
 
 <script>
 export default {
   props: {
+    value: {
+      type: String,
+      required: true
+    },
     id: {
       type: String,
       required: true
@@ -16,19 +27,28 @@ export default {
     },
     placeholder: {
       type: String
+    },
+    hasError: {
+      type: Boolean
+    },
+    errorMessage: {
+      type: String
     }
   }
 };
 </script>
 
 <style scoped lang="scss">
-  label {
-    margin-top: 30px;
-    width: 100%;
-    display: block;
-    font-size: var(--font-sm);
-    color: #B1B1B1;
-    text-transform: uppercase;
+  .text-area-field {
+    label {
+      margin-top: 30px;
+      margin-bottom: 5px;
+      width: 100%;
+      display: block;
+      font-size: var(--font-sm);
+      color: #B1B1B1;
+      text-transform: uppercase;
+    }
 
     textarea {
       padding: 10px 15px;
@@ -41,10 +61,20 @@ export default {
       color: var(--color-text);
       resize: none;
       cursor: pointer;
+      outline: none;
 
       &::placeholder {
         color: #CED2E0;
       }
+
+      &.has-error {
+        border-color: #D8000C;
+      }
+    }
+
+    .input-error-message {
+      margin-top: 5px;
+      color: #D8000C;
     }
   }
 </style>
