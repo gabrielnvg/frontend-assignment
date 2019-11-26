@@ -59,26 +59,19 @@ export default {
   methods: {
     validateCompanyName(value) {
       this.valCompanyName = value;
-      console.log('valCompanyName:', this.valCompanyName);
-      console.log('value:', value);
       this.hasErrorCompanyName = !value;
     },
     validateCompanySpend(value) {
       this.valCompanySpend = value;
-      console.log('valCompanySpend:', this.valCompanySpend);
-      console.log('value:', value);
       // To-Do: Validate CompanySpend input.
       this.hasErrorCompanySpend = !value;
     },
     validateCompanySpendAbility(value) {
       this.valCompanySpendAbility = value;
-      console.log('valCompanySpendAbility:', this.valCompanySpendAbility);
-      console.log('value:', value);
       // To-Do: Validate CompanySpendAbility input.
       this.hasErrorCompanySpendAbility = !value;
     },
     checkForm(e) {
-      // console.log('checked!')
       this.validateCompanyName(this.valCompanyName);
       this.validateCompanySpend(this.valCompanySpend);
       this.validateCompanySpendAbility(this.valCompanySpendAbility);
