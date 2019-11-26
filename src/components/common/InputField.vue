@@ -3,6 +3,7 @@
     label(:for="id") {{ label }}
     input(
       :value="value",
+      @input="$emit('input', $event.target.value)",
       type="text",
       :id="id",
       :name="id",

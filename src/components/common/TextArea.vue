@@ -3,6 +3,7 @@
     label(:for="id") {{ label }}
     textarea(
       :value="value",
+      @input="$emit('input', $event.target.value)",
       :id="id",
       :name="id",
       :class="{ 'has-error': hasError }",

@@ -3,7 +3,7 @@
     p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
     form(@submit="checkForm")
       InputField(
-        :value="valCompanyName",
+        v-model="valCompanyName",
         id="companyName",
         label="Company Name",
         placeholder="Your Company Name",
@@ -12,7 +12,7 @@
         @blur="validateCompanyName"
       )
       InputField(
-        :value="valCompanySpend",
+        v-model="valCompanySpend",
         id="companySpend",
         label="Company Spend",
         placeholder="$150,000",
@@ -21,7 +21,7 @@
         @blur="validateCompanySpend"
       )
       InputField(
-        :value="valCompanySpendAbility",
+        v-model="valCompanySpendAbility",
         id="companySpendAbility",
         label="Company Spend Ability",
         placeholder="$150,000 - $330,000",
@@ -30,7 +30,7 @@
         @blur="validateCompanySpendAbility"
       )
       TextArea(
-        :value="valNotes",
+        v-model="valNotes",
         id="notes",
         label="Notes",
         placeholder="Good Tech Company"
@@ -58,16 +58,13 @@ export default {
   }),
   methods: {
     validateCompanyName(value) {
-      this.valCompanyName = value;
       this.hasErrorCompanyName = !value;
     },
     validateCompanySpend(value) {
-      this.valCompanySpend = value;
       // To-Do: Validate CompanySpend input.
       this.hasErrorCompanySpend = !value;
     },
     validateCompanySpendAbility(value) {
-      this.valCompanySpendAbility = value;
       // To-Do: Validate CompanySpendAbility input.
       this.hasErrorCompanySpendAbility = !value;
     },
