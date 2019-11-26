@@ -7,9 +7,11 @@
 
 <script>
 export default {
-  data: () => ({
-    breadcrumbs: []
-  }),
+  data() {
+    return {
+      breadcrumbs: []
+    }
+  },
   methods: {
     setBreadcrumbs() {
       this.breadcrumbs = this.$route.meta.breadcrumbs;

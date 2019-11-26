@@ -47,15 +47,17 @@ export default {
     InputField,
     TextArea
   },
-  data: () => ({
-    valCompanyName: '',
-    valCompanySpend: '',
-    valCompanySpendAbility: '',
-    valNotes: '',
-    hasErrorCompanyName: false,
-    hasErrorCompanySpend: false,
-    hasErrorCompanySpendAbility: false
-  }),
+  data() {
+    return {
+      valCompanyName: '',
+      valCompanySpend: '',
+      valCompanySpendAbility: '',
+      valNotes: '',
+      hasErrorCompanyName: false,
+      hasErrorCompanySpend: false,
+      hasErrorCompanySpendAbility: false
+    }
+  },
   methods: {
     validateCompanyName(value) {
       this.hasErrorCompanyName = !value;
