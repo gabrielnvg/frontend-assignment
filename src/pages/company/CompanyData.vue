@@ -42,6 +42,20 @@
 import InputField from 'Components/common/InputField.vue';
 import TextArea from 'Components/common/TextArea.vue';
 
+const REGEX_ONLY_NUMBERS = /^\d+$/;
+const REGEX_CURRENCY = /^\$\d+(,\d{3})*(\.\d*)?$/;
+const REGEX_HIFEN_SPLITTER = /\s*-\s*/;
+
+const numberToCurrency = n => Number(n).toLocaleString(
+  'en-US',
+  { 
+    style: 'currency',
+    currency: 'USD',
+    minimumFractionDigits: 0,
+    maximumFractionDigits: 0
+  }
+);
+
 export default {
   components: {
     InputField,
@@ -63,30 +77,36 @@ export default {
       this.hasErrorCompanyName = !this.valCompanyName;
     },
     validateCompanySpend() {
-      const onlyNumbersRegex = /^\d+$/;
-      const currencyRegex = /^\$\d+(,\d{3})*(\.\d*)?$/;
+      if (REGEX_ONLY_NUMBERS.test(this.valCompanySpend)) {
+        this.valCompanySpend = numberToCurrency(this.valCompanySpend);
+      }
 
-      if (onlyNumbersRegex.test(this.valCompanySpend)) {
-          this.valCompanySpend = Number(this.valCompanySpend).toLocaleString(
-            'en-US',
-            { 
-              style: 'currency',
-              currency: 'USD',
-              minimumFractionDigits: 0,
-              maximumFractionDigits: 0
-            }
-          );
-        }
-
-      if (currencyRegex.test(this.valCompanySpend)) {
+      if (REGEX_CURRENCY.test(this.valCompanySpend)) {
         this.hasErrorCompanySpend = false;
       } else {
         this.hasErrorCompanySpend = true;
       }
     },
     validateCompanySpendAbility() {
-      // To-Do: Validate CompanySpendAbility input.
-      this.hasErrorCompanySpendAbility = !this.valCompanySpendAbility;
+      if (REGEX_HIFEN_SPLITTER.test(this.valCompanySpendAbility)) {
+        const splittedValue = this.valCompanySpendAbility.split(REGEX_HIFEN_SPLITTER);
+        let minimumSpend = splittedValue[0] || 0;
+        let maximumSpend = splittedValue[1] || 0;
+
+        if (REGEX_ONLY_NUMBERS.test(minimumSpend) && REGEX_ONLY_NUMBERS.test(maximumSpend)) {
+          minimumSpend = numberToCurrency(minimumSpend);
+          maximumSpend = numberToCurrency(maximumSpend);
+          this.valCompanySpendAbility = `${minimumSpend} - ${maximumSpend}`;
+        }
+
+        if (REGEX_CURRENCY.test(minimumSpend) && REGEX_CURRENCY.test(maximumSpend) && minimumSpend <= maximumSpend) {
+          this.hasErrorCompanySpendAbility = false;
+        } else {
+          this.hasErrorCompanySpendAbility = true;
+        }
+      } else {
+        this.hasErrorCompanySpendAbility = true;
+      }
     },
     checkForm(e) {
       this.validateCompanyName(this.valCompanyName);
