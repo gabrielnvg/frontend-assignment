@@ -17,7 +17,7 @@
         label="Company Spend",
         placeholder="$150,000",
         :hasError="hasErrorCompanySpend",
-        errorMessage="Company Spend field must be a positive number.",
+        errorMessage="Company Spend field must contain only positive numbers.",
         @blur="validateCompanySpend"
       )
       InputField(
