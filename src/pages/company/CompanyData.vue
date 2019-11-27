@@ -26,7 +26,7 @@
         label="Company Spend Ability",
         placeholder="$150,000 - $330,000",
         :hasError="hasErrorCompanySpendAbility",
-        errorMessage="Company Spend Ability must have two inputs, the first one is the Minimum spend and the second is Maximum spend.",
+        errorMessage="Company Spend Ability must have two inputs and the first one (minimum spend) can’t be larger than the second one (maximum spend).",
         @blur="validateCompanySpendAbility"
       )
       TextArea(
