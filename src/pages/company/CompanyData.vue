@@ -63,8 +63,26 @@ export default {
       this.hasErrorCompanyName = !this.valCompanyName;
     },
     validateCompanySpend() {
-      // To-Do: Validate CompanySpend input.
-      this.hasErrorCompanySpend = !this.valCompanySpend;
+      const onlyNumbersRegex = /^\d+$/;
+      const currencyRegex = /^\$\d+(,\d{3})*(\.\d*)?$/;
+
+      if (onlyNumbersRegex.test(this.valCompanySpend)) {
+          this.valCompanySpend = Number(this.valCompanySpend).toLocaleString(
+            'en-US',
+            { 
+              style: 'currency',
+              currency: 'USD',
+              minimumFractionDigits: 0,
+              maximumFractionDigits: 0
+            }
+          );
+        }
+
+      if (currencyRegex.test(this.valCompanySpend)) {
+        this.hasErrorCompanySpend = false;
+      } else {
+        this.hasErrorCompanySpend = true;
+      }
     },
     validateCompanySpendAbility() {
       // To-Do: Validate CompanySpendAbility input.
