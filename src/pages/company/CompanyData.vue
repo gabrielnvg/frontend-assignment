@@ -59,16 +59,16 @@ export default {
     }
   },
   methods: {
-    validateCompanyName(value) {
-      this.hasErrorCompanyName = !value;
+    validateCompanyName() {
+      this.hasErrorCompanyName = !this.valCompanyName;
     },
-    validateCompanySpend(value) {
+    validateCompanySpend() {
       // To-Do: Validate CompanySpend input.
-      this.hasErrorCompanySpend = !value;
+      this.hasErrorCompanySpend = !this.valCompanySpend;
     },
-    validateCompanySpendAbility(value) {
+    validateCompanySpendAbility() {
       // To-Do: Validate CompanySpendAbility input.
-      this.hasErrorCompanySpendAbility = !value;
+      this.hasErrorCompanySpendAbility = !this.valCompanySpendAbility;
     },
     checkForm(e) {
       this.validateCompanyName(this.valCompanyName);

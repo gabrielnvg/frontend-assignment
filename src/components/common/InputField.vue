@@ -9,7 +9,7 @@
       :name="id",
       :class="{ 'has-error': hasError }",
       :placeholder="`e.g. ${placeholder}`",
-      @blur="$emit('blur', $event.target.value)"
+      @blur="$emit('blur')"
     )
     .input-error-message(v-if="hasError") {{ errorMessage }}
 </template>
