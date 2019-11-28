@@ -33,18 +33,34 @@
         v-model="valNotes",
         id="notes",
         label="Notes",
-        placeholder="Good Tech Company"
+        placeholder="Good Tech Company",
+        @focus="showModal"
       )
       input(type="submit", style="display: none;")
+
+    ModalBox(
+      :show="showModalAdditionalNotes",
+      id="modalAdditionalNotes",
+      title="Additional notes",
+      @click="hideModal"
+    )
+      TextArea(
+        v-model="valNotes",
+        id="additionalNotes",
+        placeholder="Good Tech Company"
+      )
 </template>
 
 <script>
 import InputField from 'Components/common/InputField.vue';
 import TextArea from 'Components/common/TextArea.vue';
+import ModalBox from 'Components/common/ModalBox.vue';
 
 const REGEX_ONLY_NUMBERS = /^\d+$/;
 const REGEX_CURRENCY = /^\$\d+(,\d{3})*(\.\d*)?$/;
 const REGEX_HIFEN_SPLITTER = /\s*-\s*/;
+
+const elBody = document.querySelector('body');
 
 const numberToCurrency = n => Number(n).toLocaleString(
   'en-US',
@@ -59,7 +75,8 @@ const numberToCurrency = n => Number(n).toLocaleString(
 export default {
   components: {
     InputField,
-    TextArea
+    TextArea,
+    ModalBox
   },
   data() {
     return {
@@ -69,7 +86,8 @@ export default {
       valNotes: '',
       hasErrorCompanyName: false,
       hasErrorCompanySpend: false,
-      hasErrorCompanySpendAbility: false
+      hasErrorCompanySpendAbility: false,
+      showModalAdditionalNotes: false
     }
   },
   methods: {
@@ -118,6 +136,14 @@ export default {
       }
       
       e.preventDefault();
+    },
+    showModal() {
+      this.showModalAdditionalNotes = true;
+      elBody.style.overflow = 'hidden';
+    },
+    hideModal() {
+      this.showModalAdditionalNotes = false;
+      elBody.style.overflow = 'auto';
     }
   }
 };

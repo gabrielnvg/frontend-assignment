@@ -7,7 +7,8 @@
       :id="id",
       :name="id",
       :class="{ 'has-error': hasError }",
-      :placeholder="`e.g. ${placeholder}`"
+      :placeholder="`e.g. ${placeholder}`",
+      @focus="$emit('focus')"
     )
     .input-error-message(v-if="hasError") {{ errorMessage }}
 </template>
