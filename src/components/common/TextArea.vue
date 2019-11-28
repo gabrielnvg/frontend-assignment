@@ -60,6 +60,7 @@ export default {
       border-radius: 5px;
       font-size: var(--font-md);
       color: var(--color-text);
+      box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.1);
       resize: none;
       outline: none;
 
