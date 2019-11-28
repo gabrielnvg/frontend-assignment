@@ -61,7 +61,6 @@ export default {
       font-size: var(--font-md);
       color: var(--color-text);
       resize: none;
-      cursor: pointer;
       outline: none;
 
       &::placeholder {
