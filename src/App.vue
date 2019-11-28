@@ -4,7 +4,8 @@
     main(:style="mainContainerStyle")
       .main-container
         TheBreadcrumb
-        router-view
+        transition(name="fade")
+          router-view
     TheFooter
 </template>
 
@@ -34,3 +35,14 @@ export default {
   }
 };
 </script>
+
+<style scoped lang="scss">
+  .fade-enter,
+  .fade-leave-to {
+    opacity: 0;
+  }
+
+  .fade-enter-active {
+    transition: opacity var(--fade-duration);
+  }
+</style>

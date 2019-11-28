@@ -2,7 +2,8 @@
   .company
     TheCompanyNavbar
     .company__container
-      router-view
+      transition(name="fade")
+        router-view
 </template>
 
 <script>
@@ -34,6 +35,15 @@ export default {
 
       @media screen and (max-width: ($breakpoint-lg - 1px)) {
         margin-top: 20px;
+      }
+
+      .fade-enter,
+      .fade-leave-to {
+        opacity: 0;
+      }
+
+      .fade-enter-active {
+        transition: opacity var(--fade-duration);
       }
     }
   }
