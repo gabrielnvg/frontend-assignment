@@ -1,6 +1,6 @@
 <template lang="pug">
   .input-field
-    label(:for="id") {{ label }}
+    label(v-if="label", :for="id") {{ label }}
     input(
       :value="value",
       @input="$emit('input', $event.target.value)",

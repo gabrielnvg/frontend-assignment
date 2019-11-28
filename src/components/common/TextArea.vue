@@ -1,6 +1,6 @@
 <template lang="pug">
   .text-area-field
-    label(:for="id") {{ label }}
+    label(v-if="label", :for="id") {{ label }}
     textarea(
       :value="value",
       @input="$emit('input', $event.target.value)",
