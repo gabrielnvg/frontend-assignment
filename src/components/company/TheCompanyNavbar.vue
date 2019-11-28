@@ -21,7 +21,7 @@ export default {};
     font-size: var(--font-sm);
     font-weight: bold;
     text-transform: uppercase;
-    color: var(--color-text-highlight);
+    color: var(--color-highlight);
 
      ol {
       margin: 0;

@@ -91,7 +91,7 @@ export default {
       line-height: var(--line-height-md);
 
       a {
-        color: var(--color-text-highlight);
+        color: var(--color-highlight);
       }
     }
   }
