@@ -52,6 +52,8 @@ export default {
     &__content {
       padding: 30px;
       width: $breakpoint-sm;
+      max-height: calc(100vh - 10px);
+      overflow: auto;
       position: absolute;
       top: 50%;
       left: 50%;
