@@ -136,7 +136,7 @@ rules:
   no-delete-var: 1
   no-label-var: 1
   no-restricted-globals: 0
-  no-shadow: 0
+  no-shadow: 2
   no-shadow-restricted-names: 2
   no-undef: 1
   no-undef-init: 1
@@ -168,7 +168,7 @@ rules:
     - 1
     - 1tbs
     - allowSingleLine: true
-  camelcase: 0
+  camelcase: 1
   capitalized-comments: 0
   comma-dangle: 0
   comma-spacing: 1
@@ -189,7 +189,7 @@ rules:
     - min: 1
       max: 30
   id-match: 0
-  implicit-arrow-linebreak: 0
+  implicit-arrow-linebreak: 1
   indent:
     - 1
     - 2
@@ -206,7 +206,7 @@ rules:
     - before: true
       after: true
   line-comment-position:
-    - 0
+    - 1
     - above
   linebreak-style: 0
   lines-around-comment: 0
@@ -239,13 +239,13 @@ rules:
   multiline-ternary:
     - 1
     - always-multiline
-  new-cap: 0
+  new-cap: 1
   new-parens: 1
   newline-per-chained-call: 1
   no-array-constructor: 0
   no-bitwise: 0
   no-continue: 1 # Use "if" block instead of "continue"
-  no-inline-comments: 0
+  no-inline-comments: 1
   no-lonely-if: 1
   no-mixed-operators: 2 # Use parenthesis for expression separation
   no-mixed-spaces-and-tabs: 1
@@ -340,7 +340,7 @@ rules:
   prefer-destructuring: 1
   prefer-numeric-literals: 1
   prefer-rest-params: 1
-  prefer-template: 0
+  prefer-template: 1
   require-yield: 2
   rest-spread-spacing: 1
   sort-imports: 0
