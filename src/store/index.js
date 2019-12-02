@@ -20,4 +20,4 @@ export default new Vuex.Store({
       state.mainContainerStyle.backgroundColor = defaultMainBackgroundColor;
     }
   }
-})
+});
