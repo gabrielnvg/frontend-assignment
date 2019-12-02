@@ -41,7 +41,7 @@ export default {
     width: 100vw;
     height: 100vh;
     z-index: 999;
-    
+
     &__overlay {
       width: 100%;
       height: 100%;
@@ -62,7 +62,7 @@ export default {
       border: 1px solid var(--color-border);
       border-radius: 5px;
       box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.15);
-      
+
       @media screen and (max-width: $breakpoint-sm + 10px) {
         width: calc(100% - 10px);
       }

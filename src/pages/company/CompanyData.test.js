@@ -3,7 +3,7 @@ import CompanyData from './CompanyData.vue';
 
 describe('CompanyData.vue inputs validations', () => {
   const wrapper = mount(CompanyData);
-  
+
   const inputBlurValidation = (inputId, inputValue, isErrorExpected) => {
     wrapper.find(inputId).setValue(inputValue);
     wrapper.find(inputId).trigger('blur');

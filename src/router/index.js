@@ -17,7 +17,8 @@ const routes = [
       {
         path: '',
         redirect: 'company'
-      },{
+      },
+      {
         path: 'home',
         name: 'home',
         component: Home,
@@ -97,10 +98,10 @@ const routes = [
     path: '*',
     redirect: '/'
   }
-]
+];
 
 const router = new VueRouter({
   routes
-})
+});
 
 export default router;

@@ -64,7 +64,7 @@ const elBody = document.querySelector('body');
 
 const numberToCurrency = n => Number(n).toLocaleString(
   'en-US',
-  { 
+  {
     style: 'currency',
     currency: 'USD',
     minimumFractionDigits: 0,
@@ -88,7 +88,7 @@ export default {
       hasErrorCompanySpend: false,
       hasErrorCompanySpendAbility: false,
       showModalAdditionalNotes: false
-    }
+    };
   },
   methods: {
     validateCompanyName() {
@@ -130,11 +130,11 @@ export default {
       this.validateCompanyName(this.valCompanyName);
       this.validateCompanySpend(this.valCompanySpend);
       this.validateCompanySpendAbility(this.valCompanySpendAbility);
-      
+
       if (!this.hasErrorCompanyName && !this.hasErrorCompanySpend && !this.hasErrorCompanySpendAbility) {
         return true;
       }
-      
+
       e.preventDefault();
     },
     showModal() {

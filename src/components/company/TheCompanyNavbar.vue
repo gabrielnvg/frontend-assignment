@@ -35,7 +35,7 @@ export default {};
         &:not(:last-of-type) {
           border-bottom: 1px solid var(--color-border);
         }
-        
+
         &:hover {
           color: #7585C4;
         }

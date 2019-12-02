@@ -10,7 +10,7 @@ export default {
   data() {
     return {
       breadcrumbs: []
-    }
+    };
   },
   methods: {
     setBreadcrumbs() {
@@ -57,7 +57,7 @@ export default {
             cursor: initial;
           }
         }
-        
+
         a {
           color: inherit;
           text-decoration: none;
