@@ -60,7 +60,7 @@ const REGEX_ONLY_NUMBERS = /^\d+$/;
 const REGEX_CURRENCY = /^\$\d+(,\d{3})*(\.\d*)?$/;
 const REGEX_HIFEN_SPLITTER = /\s*-\s*/;
 
-const elBody = document.querySelector('body');
+const elBody = document.body;
 
 const numberToCurrency = n => Number(n).toLocaleString(
   'en-US',
