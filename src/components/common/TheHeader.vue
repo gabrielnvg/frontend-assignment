@@ -1,5 +1,5 @@
 <template lang="pug">
-  .the-header
+  header.the-header
 </template>
 
 <script>

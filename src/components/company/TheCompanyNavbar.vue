@@ -1,5 +1,5 @@
 <template lang="pug">
-  .company-navbar
+  nav.company-navbar
     ol
       router-link(tag="li", :to="'/company/data'") Company Data
       router-link(tag="li", :to="'/company/table'") Company Table
